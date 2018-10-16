@@ -2,7 +2,7 @@
 
 Time Series Analysis and Its Applications: With R Examples by Shumway and Stoffer
 
-http://db.ucsd.edu/static/TimeSeries.pdf
+<a href="http://db.ucsd.edu/static/TimeSeries.pdf">Full text</a>
 
 Chapters included:
 
@@ -13,3 +13,5 @@ Chapters included:
 * 3 - ARIMA Models
 
 * 4 - Spectral Analysis and Filtering
+
+<a href="https://github.com/brucebcampbell/applied-time-series-analysis-with-R">With special help from this repo</a>
