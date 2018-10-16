@@ -23,4 +23,4 @@ s.2=c(rep(0,100),10*exp(-(1:100)/200)*cos(2*pi*1:100/4))
 x.2=ts(s.2+rnorm(200,0,1))
 plot(x.2)
 ```
-c.) Compare the general appearance of the series (a) and (b) with the earthquake series and the explosion series shown in Figure 1.7. In addition, plot (or sketch) and compare the signal modulators (a) exp{???t/20} and (b) exp{???t/200}, for t = 1, 2, . . . , 100.
+c.) Compare the general appearance of the series (a) and (b) with the earthquake series and the explosion series shown in Figure 1.7. In addition, plot (or sketch) and compare the signal modulators (a) exp{-t/20} and (b) exp{-t/200}, for t = 1, 2, . . . , 100.
