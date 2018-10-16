@@ -1,0 +1,7 @@
+---
+title: "Chapter 1 Problem 2"
+author: "Andira Putri"
+output: pdf_document
+---
+
+Consider a signal-plus-noise model of the general form $x_t = s_t + w_t$, where $w_t$ is Gaussian white noise with $\sigma^2_{w}=1$. Simulate and plot n = 200 observations from each of the following two models
