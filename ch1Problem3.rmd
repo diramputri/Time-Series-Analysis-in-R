@@ -30,7 +30,7 @@ lines(v,col="red",lty="dashed")
 ```{r}
 x.cos=ts(cos(2*pi*1:150*0.2/4))
 v.cos=filter(x.cos,sides=1,rep(1/4,4))
-plot.ts(x.cos,main="Autoregression",xlim=c(1,100))
+plot.ts(x.cos,main="Time Series",xlim=c(1,100))
 lines(v.cos,col="orchid",lty="dashed")
 ```
 
@@ -40,7 +40,7 @@ lines(v.cos,col="orchid",lty="dashed")
 noise=rnorm(150,0,1)
 x.cos.noise=ts(cos(2*pi*1:150*0.2/4)+noise)
 v.cos.noise=filter(x.cos.noise,sides=1,rep(1/4,4))
-plot.ts(x.cos.noise,main="Autoregression",xlim=c(1,100))
+plot.ts(x.cos.noise,main="Noisy Time Series",xlim=c(1,100))
 lines(v.cos.noise,col="blue",lty="dashed")
 ```
 
