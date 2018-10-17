@@ -31,6 +31,18 @@ x.2=ts(s.2+rnorm(200,0,1))
 plot(x.2)
 ```
 
-We compare te graphs to Figure 1.7, shown below:
+We compare the graphs above to Figure 1.7, shown below:
 
 ![Arrival phases from an earthquake (top) and explosion (bottom) at 40 points per second.](earthquakeExplosion.png)
+
+We look at how the oscillation damps (decreases in amplitude while remaining sinusoidal) in our two models above and in the earthquake/explosion plots. The model in (a) resembles the explosion time series plot in that they both have a burst and quickly dampens afterwards. Model (b) resembles the earthquake time series in that after a burst, the oscillations do not dampen.
+
+```{r}
+t=rnorm(1000,0,1)
+y1=exp(-t/20)
+y2=exp(-t/200)
+plot(t,y1,xlim=c(-5,5),ylim=c(0,2))
+plot(t,y2,xlim=c(-5,5),ylim=c(0,2))
+```
+
+We see that the signal modulator exp(-t/20) decreases faster than exp(-t/200), which could explains the faster damping rate of model (a) than model (b).
