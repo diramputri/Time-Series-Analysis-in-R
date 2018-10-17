@@ -29,3 +29,10 @@ par(mfrow=c(3,1)) # plot ACFs
 acf(gtemp, 48, main="gtemp")
 acf(resid(fit), 48, main="detrended")
 acf(diff(gtemp), 48, main="first difference")
+
+set.seed(1000) # so you can reproduce these results
+x = 2*cos(2*pi*1:500/50 + .6*pi) + rnorm(500,0,5)
+z1 = cos(2*pi*1:500/50); z2 = sin(2*pi*1:500/50)
+summary(fit <- lm(x~0+z1+z2)) # zero to exclude the intercept
+plot.ts(x, lty="dashed")
+lines(fitted(fit), lwd=2)
