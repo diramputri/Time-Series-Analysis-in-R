@@ -46,4 +46,4 @@ lines(v.cos.noise,col="blue",lty="dashed")
 
 (d) Compare and contrast the models above.
 
-Hi
+When we move from part (a) to (b), we see that adding the moving average filter smoothens the time series, meaning there's not as many random fluctuations and we can more easily see a trend. We also see from parts (c) and (d) that white noise significantly roughens the time series.
