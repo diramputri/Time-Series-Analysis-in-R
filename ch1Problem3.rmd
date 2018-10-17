@@ -1,0 +1,13 @@
+---
+title: "Chapter 1 Problem 3"
+author: "Andira Putri"
+date: "October 17, 2018"
+output: pdf_document
+---
+
+#### This problem studies white noise, moving average filters, and autoregression.
+
+(a) Generate n = 100 observations from the autoregression $x_t =-.9x_t-2 +w_t$ with $\sigma_w=1$, using the method described in Example 1.10, page 13. Next, apply the moving average filter $v_t=(x_t + x_{t-1} + x_{t-2} + x_{t-3})/4$ to $x_t$, the data you generated. Now, plot $x_t$ as a line and superimpose $v_t$ as a dashed line. Comment on the behavior of $x_t$ and how applying the moving average filter changes that behavior.
+
+```{r}
+```
