@@ -4,18 +4,25 @@ author: "Andira Putri"
 output: pdf_document
 ---
 
-Consider a signal-plus-noise model of the general form $x_t = s_t + w_t$, where $w_t$ is Gaussian white noise with $\sigma^2_{w}=1$. Simulate and plot n=200 observations from each of the following two models:
+Consider a signal-plus-noise model of the general form $x_t = s_t + w_t$, where $w_t$ is Gaussian white noise with $\sigma^2_{w}=1$. Simulate and plot n=200 observations from two models. Compare the general appearance of the series (a) and (b) with the earthquake series and the explosion series shown in Figure 1.7. In addition, plot (or sketch) and compare the signal modulators (a) exp{-t/20} and (b) exp{-t/200}, for t = 1, 2, . . . , 100.
 
-a.)
+#### a.)
+
+$$s_t = 0 ;; t = 1,..., 100$$ 
+
+$$s_t=10e^{\frac{(100t)}{20}}cos(\frac{2\pi t}{4}) ;; t = 101,..., 200$$
 
 ```{r}
+setwd("~/Time Series Analysis and Its Applications")
 set.seed(1)
 s=c(rep(0,100),10*exp(-(1:100)/20)*cos(2*pi*1:100/4))
 x=ts(s+rnorm(200,0,1))
 plot(x)
 ```
 
-b.)
+#### b.)
+
+$$s_t = 0 ;; t = 1,..., 100$$ $$s_t=10e^{\frac{(100t)}{200}}cos(\frac{2\pi t}{4}) ;; t = 101,..., 200$$
 
 ```{r}
 set.seed(1)
@@ -23,4 +30,7 @@ s.2=c(rep(0,100),10*exp(-(1:100)/200)*cos(2*pi*1:100/4))
 x.2=ts(s.2+rnorm(200,0,1))
 plot(x.2)
 ```
-c.) Compare the general appearance of the series (a) and (b) with the earthquake series and the explosion series shown in Figure 1.7. In addition, plot (or sketch) and compare the signal modulators (a) exp{-t/20} and (b) exp{-t/200}, for t = 1, 2, . . . , 100.
+
+We compare te graphs to Figure 1.7, shown below:
+
+![Arrival phases from an earthquake (top) and explosion (bottom) at 40 points per second.](earthquakeExplosion.png)
