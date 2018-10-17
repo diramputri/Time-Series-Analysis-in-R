@@ -1,7 +1,6 @@
 ---
 title: "Chapter 1 Problem 3"
 author: "Andira Putri"
-date: "October 17, 2018"
 output: pdf_document
 ---
 
@@ -10,4 +9,19 @@ output: pdf_document
 (a) Generate n = 100 observations from the autoregression $x_t =-.9x_t-2 +w_t$ with $\sigma_w=1$, using the method described in Example 1.10, page 13. Next, apply the moving average filter $v_t=(x_t + x_{t-1} + x_{t-2} + x_{t-3})/4$ to $x_t$, the data you generated. Now, plot $x_t$ as a line and superimpose $v_t$ as a dashed line. Comment on the behavior of $x_t$ and how applying the moving average filter changes that behavior.
 
 ```{r}
+set.seed(89)
+w=rnorm(150) #50 extra to avoid startup problems
+x=filter(w,filter=c(1,-0.9),method="recursive")[-(1:50)]
+plot.ts(x,main="Autoregression")
 ```
+
+Now, we implement the moving average filter and superimpose it on the autoregression graph.
+
+```{r}
+```
+
+(b) Repeat but with $x_t=cos(2\pi t/4)$.
+
+(c) Repeat but with added N(0,1) white noise; $x_t=cos(2\pi t/4) + w_t$.
+
+(d) Compare and contrast the models above.
