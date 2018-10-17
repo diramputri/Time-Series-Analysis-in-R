@@ -1,6 +1,5 @@
 # Akaike's Information Criterion (AIC)
 # Bayesian Information Criterion (BIC)
-
 par(mfrow=c(3,1))
 plot(cmort, main="Cardiovascular Mortality", xlab="", ylab="")
 plot(tempr, main="Temperature", xlab="", ylab="")
@@ -20,7 +19,6 @@ AIC(fit, k=log(num))/num - log(2*pi) # BIC
 (AICc = log(sum(resid(fit)^2)/num) + (num+5)/(num-5-2)) # AICc
 
 # Detrend a Series
-
 fit = lm(gtemp~time(gtemp), na.action=NULL) # regress gtemp on time
 par(mfrow=c(2,1))
 plot(resid(fit), type="o", main="detrended")
@@ -31,7 +29,6 @@ acf(resid(fit), 48, main="detrended")
 acf(diff(gtemp), 48, main="first difference")
 
 # Use Regression to Find Signal in Noise
-
 set.seed(1000) # so you can reproduce these results
 x = 2*cos(2*pi*1:500/50 + .6*pi) + rnorm(500,0,5)
 z1 = cos(2*pi*1:500/50); z2 = sin(2*pi*1:500/50)
