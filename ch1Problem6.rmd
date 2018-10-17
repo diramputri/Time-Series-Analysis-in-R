@@ -1,7 +1,0 @@
----
-title: "Chapter 1 Problem 6"
-author: "Andira Putri"
-output: pdf_document
----
-
-#### Problem 6
