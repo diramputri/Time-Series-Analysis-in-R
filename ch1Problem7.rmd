@@ -1,0 +1,17 @@
+---
+title: "Chapter 1 Problem 7"
+author: "Andira Putri"
+output: pdf_document
+---
+
+#### Problem 7 goes over autocovariance functions and autocorrelations functions, i.e. acfs.
+
+For a moving average process of the form $x_t=w_{t-1}+2wt+w_{t+1}$, where $w_t$ are independent with zero means and variance $\sigma_w^2$, determine the autocovariance and autocorrelation functions as a function of lag $h=s-t$ and plot the ACF as a function of h.
+
+For the autocovariance and autocorrelation function derivations, see the file `ch1Problem7Scanned.pdf` in this repository.
+
+```{r}
+#ACF as a function of h
+points=data.frame(h=c(-5,-4,-3,-2,-1,0,1,2,3,4,5),rho=c(0,0,0,1/6,4/6,1,4/6,1/6,0,0,0))
+plot(points,xlab="Lag",ylab="Autocorrelation")
+```
