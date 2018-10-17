@@ -30,6 +30,8 @@ acf(gtemp, 48, main="gtemp")
 acf(resid(fit), 48, main="detrended")
 acf(diff(gtemp), 48, main="first difference")
 
+# Use Regression to Find Signal in Noise
+
 set.seed(1000) # so you can reproduce these results
 x = 2*cos(2*pi*1:500/50 + .6*pi) + rnorm(500,0,5)
 z1 = cos(2*pi*1:500/50); z2 = sin(2*pi*1:500/50)
