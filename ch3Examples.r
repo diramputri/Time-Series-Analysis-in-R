@@ -30,3 +30,10 @@ ts.plot(rec, fore$pred, col=1:2, xlim=c(1980,1990),ylab="Recruitment")
 lines(fore$pred, type="p", col=2)
 lines(fore$pred+fore$se, lty="dashed", col=4)
 lines(fore$pred-fore$se, lty="dashed", col=4)
+     
+#Yule-Walker Estimation
+rec.yw = ar.yw(rec, order=2)
+rec.yw$x.mean # = 62.26 (mean estimate)
+rec.yw$ar # = 1.33, -.44 (parameter estimates)
+sqrt(diag(rec.yw$asy.var.coef)) # = .04, .04 (standard errors)
+rec.yw$var.pred # = 94.80 (error variance estimate)
