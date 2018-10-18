@@ -1,7 +1,0 @@
----
-title: "Chapter 3 Problem 1"
-author: "Andira Putri"
-output: pdf_document
----
-
-For an MA(1), $x_t = w_t + \theta w_{t−1}$, show that $|{\rho_x(1)}| \leq \frac{1}{2}$ for any number $\theta$. For which values of $\theta$ does $\rho_x(1)$ attain its maximum and minimum?
