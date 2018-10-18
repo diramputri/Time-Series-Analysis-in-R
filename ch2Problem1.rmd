@@ -6,3 +6,13 @@ output: pdf_document
 
 For the Johnson & Johnson data, say $y_t$, shown in Figure 1.1, let $x_t = log(y_t)$. Fit the regression model:
 $x_t = \beta t + \alpha_1Q_1(t) + \alpha_2Q_2(t) + \alpha_3Q_3(t) + \alpha_4Q_4(t) + w_t$ where $Q_i(t) = 1$ if time t corresponds to quarter i = 1, 2, 3, 4, and zero otherwise. The $Q_i(t)$’s are called indicator variables. We will assume for now that wt is a Gaussian white noise sequence. What is the interpretation of the parameters $\beta, \alpha_1, \alpha_2, \alpha_3$, and $\alpha_4$? What happens if you include an intercept term in the model? Graph the data, $x_t$, and superimpose the fitted values on the graph. Examine the residuals, $x_t-\hat{x}_t$ and state your conclusions. Does it appear that the model fits the data well (do the residuals look white)?
+
+```{r}
+#import data
+library(astsa)
+data(jj)
+#create indicator variables
+#fit regression model WITHOUT intercept
+#fit regression mdel WITH intercept
+#plot residuals
+```
