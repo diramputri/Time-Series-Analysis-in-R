@@ -21,6 +21,7 @@ fit=lm(log(jj)~time(jj)+Q1+Q2+Q3+Q4-1)
 summary(fit)
 #fit regression mdel WITH intercept
 fit.2=lm(log(jj)~time(jj)+Q1+Q2+Q3+Q4)
+summary(fit.2)
 plot(jj)
 abline(fit.2,col="red")
 #plot residuals
