@@ -1,0 +1,6 @@
+---
+title: "Chapter 3 Problem 1"
+author: "Andira Putri"
+output: pdf_document
+---
+
