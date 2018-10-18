@@ -4,7 +4,7 @@ author: "Andira Putri"
 output: pdf_document
 ---
 
-Let $x_t$ represent the cardiovascular mortality series (`cmort`) discussed in Chapter 2, Example 2.2.  Fit an AR(2) to $x_t$ using linear regression as in Example 3.17. Assuming the fitted model in is the true model, find the forecasts over a four-week horizon, $x^n_{n+m}$, for m = 1, 2, 3, 4, and the corresponding 95% prediction intervals.
+Let $x_t$ represent the cardiovascular mortality series (`cmort`) discussed in Chapter 2, Example 2.2.  Fit an AR(2) to $x_t$ using linear regression as in Example 3.17. Assuming the fitted model is the true model, find the forecasts over a four-week horizon, $x^n_{n+m}$, for m = 1, 2, 3, 4, and the corresponding 95% prediction intervals.
 
 ```{r}
 library(astsa)
