@@ -37,3 +37,8 @@ rec.yw$x.mean # = 62.26 (mean estimate)
 rec.yw$ar # = 1.33, -.44 (parameter estimates)
 sqrt(diag(rec.yw$asy.var.coef)) # = .04, .04 (standard errors)
 rec.yw$var.pred # = 94.80 (error variance estimate)
+     
+#Moments Estimation for MA(1)
+set.seed(2)
+ma1 = arima.sim(list(order = c(0,0,1), ma = 0.9), n = 50)
+acf(ma1, plot=FALSE)[1] # = .507 (lag 1 sample ACF)
