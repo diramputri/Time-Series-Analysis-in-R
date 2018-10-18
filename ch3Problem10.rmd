@@ -9,4 +9,7 @@ Let $x_t$ represent the cardiovascular mortality series (`cmort`) discussed in C
 ```{r}
 library(astsa)
 data(cmort)
+acf2(cmort,60)
+regr = ar.ols(cmort,order=2, demean=FALSE, intercept=TRUE)
+regr$asy.se.coef # standard errors of the estimates
 ```
