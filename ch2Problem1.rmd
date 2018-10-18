@@ -20,5 +20,8 @@ Q4=rep(c(0,0,0,1),length(jj)/4)
 fit=lm(log(jj)~time(jj)+Q1+Q2+Q3+Q4-1)
 summary(fit)
 #fit regression mdel WITH intercept
+fit.2=lm(log(jj)~time(jj)+Q1+Q2+Q3+Q4)
+plot(jj)
+abline(fit.2,col="red")
 #plot residuals
 ```
