@@ -24,4 +24,7 @@ fit.2=lm(log(jj)~time(jj)+Q1+Q2+Q3+Q4)
 plot(jj)
 abline(fit.2,col="red")
 #plot residuals
+par(mfrow=c(2,2))
+plot(fit)
+plot(fit.2)
 ```
