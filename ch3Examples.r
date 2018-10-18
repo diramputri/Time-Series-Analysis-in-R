@@ -17,3 +17,10 @@ z = c(1,-1.5,.75) # coefficients of the polynomial
 (a = polyroot(z)[1]) # print one root: 1+0.57735i = 1 + i/sqrt(3)
 arg = Arg(a)/(2*pi) # arg in cycles/pt
 1/arg # = 12, the pseudo period
+
+#ACF,PACF
+ACF = ARMAacf(ar=c(1.5,-.75), ma=0, 24)[-1]
+PACF = ARMAacf(ar=c(1.5,-.75), ma=0, 24, pacf=TRUE)
+par(mfrow=c(1,2))
+plot(ACF, type="h", xlab="lag", ylim=c(-.8,1)); abline(h=0)
+plot(PACF, type="h", xlab="lag", ylim=c(-.8,1)); abline(h=0)
