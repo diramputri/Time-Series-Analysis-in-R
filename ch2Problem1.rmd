@@ -12,7 +12,13 @@ $x_t = \beta t + \alpha_1Q_1(t) + \alpha_2Q_2(t) + \alpha_3Q_3(t) + \alpha_4Q_4(
 library(astsa)
 data(jj)
 #create indicator variables
+Q1=rep(c(1,0,0,0),length(jj)/4)
+Q2=rep(c(0,1,0,0),length(jj)/4)
+Q3=rep(c(0,0,1,0),length(jj)/4)
+Q4=rep(c(0,0,0,1),length(jj)/4)
 #fit regression model WITHOUT intercept
+fit=lm(log(jj)~time(jj)+Q1+Q2+Q3+Q4-1)
+summary(fit)
 #fit regression mdel WITH intercept
 #plot residuals
 ```
