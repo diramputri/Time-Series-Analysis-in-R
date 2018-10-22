@@ -2,7 +2,7 @@
 
 Time Series Analysis and Its Applications: With R Examples by Shumway and Stoffer
 
-<a href="http://db.ucsd.edu/static/TimeSeries.pdf">First three chapters in the book</a>
+<a href="https://www.stat.pitt.edu/stoffer/tsa4/tsa4.pdf">Here is the book</a>
 
 Chapters included:
 
